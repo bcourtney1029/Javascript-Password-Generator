@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css" />
+    
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Password Generator</h1>
+      </header>
+      <div class="card">
+        <div class="card-header">
+          <h2>Choose the criteria for your password</h2>
+        </div>
+        <div class="length" id="length">
+          
+        </div>
+        <div class="slidecontainer">
+          <input type="range" min="8" max="128" value="8" class="slider" id="slider">
+        </div>
+        
+        <div class="passComplex">
+          <p>Password Complexity:</p>
+        </div>
+        
+          <select id="choice" multiple="multiple">
+            <option value="1">Extremely Weak Password (Lowercase)</option>
+            <option value="2">Weak Password (Uppercase, Lowercase)</option>
+            <option value="3">Medium Password (Uppercase, Lowercase, Numbers)</option>
+            <option value="4">Strong Password (Uppercase, Lowercase, Numbers, Special characters)</option>
+          </select>
+        
+        <div class="card-body">
+          <textarea
+            readonly
+            id="password"
+            placeholder="Click generate below for your own secure password!"
+            aria-label="Generated Password"
+          ></textarea>
+        </div>
+        
+        
+        <div class="card-footer">
+          <button onclick=generate() id="generate" class="btn">Generate Password</button>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
